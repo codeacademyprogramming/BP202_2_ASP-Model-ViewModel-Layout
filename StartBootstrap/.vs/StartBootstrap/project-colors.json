@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "709a422d-8d7b-43ce-b56d-3dfeeeabdced": {
+      "ProjectGuid": "709a422d-8d7b-43ce-b56d-3dfeeeabdced",
+      "DisplayName": "StartBootstrap",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

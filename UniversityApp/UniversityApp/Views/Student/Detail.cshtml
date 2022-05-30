@@ -1,0 +1,17 @@
+﻿@model Student
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Detail";
+
+}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+              <h1>@Model.Name @Model.Surname</h1>
+              <h3>Point: @Model.Point</h3>
+
+            </div>
+        </div>
+    </div>

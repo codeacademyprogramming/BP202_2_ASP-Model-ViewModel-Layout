@@ -1,0 +1,61 @@
+﻿@model HomeViewModel
+@{
+    int count = 0;
+    int groupCounter = 0;
+    Layout = "_Layout";
+    ViewData["Title"] = "Home page";
+}
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Surname</th>
+                            <th scope="col">Point</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Student std in Model.Students)
+                        {
+                            count++;
+                            <tr>
+                                <th scope="row">@count</th>
+                                <td>
+                                    <a asp-action="detail" asp-controller="student" asp-route-id="@std.Id" >@std.Name</a>
+                                    </td>
+                                <td>@std.Surname</td>
+                                <td class="@(std.Point<51?"text-danger":"")">@std.Point</td>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-5">
+                  <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">No</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach(Group grp in Model.Groups)
+                    {
+                        groupCounter++;
+                        <tr>
+
+                                <th scope="row">@groupCounter</th>
+                                <td>@grp.No</td>
+                            </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
